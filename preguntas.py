@@ -29,7 +29,13 @@ def pregunta_01():
     X = df.copy()
 
     # Remueva la columna `charges` del DataFrame `X`.
-    X.drop(columns="charges")
+    X.drop("charges", axis=1, inplace=True)
+
+    # Imprima las dimensiones de `X`
+    print(X.shape)
+
+    # Imprima las dimensiones de `y`
+    print(y.shape)
     return X, y
 
 
